@@ -1,3 +1,5 @@
+## Firebase 9, authentication
+
 #### Initialization
 
 ```js
@@ -18,7 +20,7 @@ export const app = initializeApp(config);
 export const auth = getAuth(app);
 ```
 
-**Create User**
+#### Create User
 
 ```js
 import { createUserWithEmailAndPassword } from 'firebase/auth';
@@ -31,7 +33,7 @@ await createUserWithEmailAndPassword(
 ```
 
 
-**Signin using email and password**
+#### Signin using email and password
 ```js
 import { signInWithEmailAndPassword } from 'firebase/auth';
 
@@ -43,7 +45,7 @@ await signInWithEmailAndPassword(
 ```
 
 
-**Authenticated user observer**
+#### Authenticated user observer
 ```js
 import { onAuthStateChanged } from "firebase/auth";
 
