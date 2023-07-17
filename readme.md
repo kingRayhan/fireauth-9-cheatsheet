@@ -44,6 +44,19 @@ await signInWithEmailAndPassword(
 )
 ```
 
+#### Signin with popup -> Social login
+
+```js
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+
+export const auth = getAuth(app);
+
+const provider = new GoogleAuthProvider();
+signInWithPopup(auth, provider).then((res) => {
+  console.log(res);
+});
+```
+
 
 #### Authenticated user observer
 ```js
@@ -61,3 +74,6 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 ```
+
+
+
